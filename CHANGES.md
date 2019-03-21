@@ -8,9 +8,17 @@
 
 * Add `insert` and `remove` methods to `HttpResponseBuilder`
 
+* Add client HTTP Authentication methods `.basic_auth()`  and `.bearer_auth()`. #540
+
+* Add support for PATCH HTTP method
+
 ### Fixed
 
 * Ignored the `If-Modified-Since` if `If-None-Match` is specified. #680
+
+* Do not remove `Content-Length` on `Body::Empty` and insert zero value if it is missing for `POST` and `PUT` methods.
+
+* Fix preflight CORS header compliance; refactor previous patch (#603). #717
 
 ## [0.7.18] - 2019-01-10
 
